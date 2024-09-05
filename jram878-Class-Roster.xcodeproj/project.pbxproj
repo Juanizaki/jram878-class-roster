@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E94064B82C40BDD600AF11DC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E94064B72C40BDD600AF11DC /* main.cpp */; };
+		E94064C22C40C71200AF11DC /* student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E94064C02C40C71200AF11DC /* student.cpp */; };
+		E94064C52C40C7A700AF11DC /* roster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E94064C32C40C7A700AF11DC /* roster.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,11 @@
 /* Begin PBXFileReference section */
 		E94064B42C40BDD600AF11DC /* jram878-Class-Roster */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "jram878-Class-Roster"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94064B72C40BDD600AF11DC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E94064BE2C40C68A00AF11DC /* degree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = degree.hpp; sourceTree = "<group>"; };
+		E94064C02C40C71200AF11DC /* student.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = student.cpp; sourceTree = "<group>"; };
+		E94064C12C40C71200AF11DC /* student.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = student.hpp; sourceTree = "<group>"; };
+		E94064C32C40C7A700AF11DC /* roster.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = roster.cpp; sourceTree = "<group>"; };
+		E94064C42C40C7A700AF11DC /* roster.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = roster.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +64,30 @@
 		E94064B62C40BDD600AF11DC /* jram878-Class-Roster */ = {
 			isa = PBXGroup;
 			children = (
-				E94064B72C40BDD600AF11DC /* main.cpp */,
+				E9CC2F6E2C715A0C0021F149 /* source-files */,
+				E9CC2F6D2C71596D0021F149 /* header-files */,
 			);
 			path = "jram878-Class-Roster";
+			sourceTree = "<group>";
+		};
+		E9CC2F6D2C71596D0021F149 /* header-files */ = {
+			isa = PBXGroup;
+			children = (
+				E94064BE2C40C68A00AF11DC /* degree.hpp */,
+				E94064C12C40C71200AF11DC /* student.hpp */,
+				E94064C42C40C7A700AF11DC /* roster.hpp */,
+			);
+			path = "header-files";
+			sourceTree = "<group>";
+		};
+		E9CC2F6E2C715A0C0021F149 /* source-files */ = {
+			isa = PBXGroup;
+			children = (
+				E94064B72C40BDD600AF11DC /* main.cpp */,
+				E94064C02C40C71200AF11DC /* student.cpp */,
+				E94064C32C40C7A700AF11DC /* roster.cpp */,
+			);
+			path = "source-files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,7 +124,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E94064AF2C40BDD600AF11DC /* Build configuration list for PBXProject "jram878-Class-Roster" */;
+			buildConfigurationList = E94064AF2C40BDD600AF11DC /* Build configuration list for PBXProject "jram878-class-roster" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -120,6 +148,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E94064B82C40BDD600AF11DC /* main.cpp in Sources */,
+				E94064C52C40C7A700AF11DC /* roster.cpp in Sources */,
+				E94064C22C40C71200AF11DC /* student.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +290,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E94064AF2C40BDD600AF11DC /* Build configuration list for PBXProject "jram878-Class-Roster" */ = {
+		E94064AF2C40BDD600AF11DC /* Build configuration list for PBXProject "jram878-class-roster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E94064B92C40BDD600AF11DC /* Debug */,
