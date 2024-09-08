@@ -41,7 +41,7 @@ void Student::setLastName(string lastName) { this->lastName = lastName; }
 void Student::setEmailAddress(string emailAddress) { this->emailAddress = emailAddress; }
 void Student::setAge(int age) { this->age = age; }
 void Student::setDaysToComplete(int daysToComplete[]) {
-    for (int i = 0; i < 3; ++i) {   // Loop through the array
+    for (int i = 0; i < 3; ++i) {
         this->daysToComplete[i] = daysToComplete[i];    // Set each element of the array
     }
 }
@@ -55,6 +55,12 @@ void Student::print() {
          << "Email: " << emailAddress << "\t"
          << "Age: " << age << "\t"
          << "Days in Course: {" << daysToComplete[0] << ", " << daysToComplete[1] << ", " << daysToComplete[2] << "}\t"
-         << "Degree Program: " << (degreeProgram == SECURITY ? "Security" : degreeProgram == NETWORK ? "Network" : "Software")
-         << endl;
+         << "Degree Program: ";
+         if (degreeProgram == SECURITY) {
+             cout << "Security" << endl;
+         } else if (degreeProgram == NETWORK) {
+             cout << "Network" << endl;
+         } else {
+             cout << "Software" << endl;
+         }
 }

@@ -26,6 +26,9 @@ int main() {
         "A5,Juan,Ramos,jram878@wgu.edu,29,51,22,55,SOFTWARE"
     };
     
+    
+    
+    
     /* *** TESTING *** */
     
     // Array for days to complete courses
@@ -42,6 +45,36 @@ int main() {
     cout << "Email: " << student1.getEmailAddress() << endl;
     cout << "Age: " << student1.getAge() << endl;
     cout << "Days in Course: {" << student1.getDaysToComplete()[0] << ", " << student1.getDaysToComplete()[1] << ", " << student1.getDaysToComplete()[2] << "}" << endl;
-    cout << "Degree Program: " << (student1.getDegreeProgram() == SOFTWARE ? "Software" : "") << endl;
-        
+    cout << "Degree Program: ";
+    if (student1.getDegreeProgram() == SECURITY) {
+        cout << "Security" << endl;
+    } else if (student1.getDegreeProgram() == NETWORK) {
+        cout << "Network" << endl;
+    } else {
+        cout << "Software" << endl << endl;
+    }
+    
+    // Testing setter functions
+    student1.setStudentID("A2");
+    student1.setFirstName("Jeff");
+    student1.setLastName("Shmeff");
+    student1.setEmailAddress("jeff.shmeff@test.com");
+    student1.setAge(25);
+    student1.setDaysToComplete(int daysArray[3] = {20, 20, 20}); // Update to set new array
+    student1.setDegreeProgram(SECURITY);
+    cout << "*** Testing Setter Functions ***" << endl;
+    cout << "StudentID: " << student1.getStudentID() << endl;
+    cout << "First Name: " << student1.getFirstName() << endl;
+    cout << "Last Name: " << student1.getLastName() << endl;
+    cout << "Email: " << student1.getEmailAddress() << endl;
+    cout << "Age: " << student1.getAge() << endl;
+    cout << "Days in Course: {" << student1.getDaysToComplete()[0] << ", " << student1.getDaysToComplete()[1] << ", " << student1.getDaysToComplete()[2] << "}" << endl;
+    cout << "Degree Program: ";
+    if (student1.getDegreeProgram() == SECURITY) {
+        cout << "Security" << endl;
+    } else if (student1.getDegreeProgram() == NETWORK) {
+        cout << "Network" << endl;
+    } else {
+        cout << "Software" << endl << endl;
+    }
 }

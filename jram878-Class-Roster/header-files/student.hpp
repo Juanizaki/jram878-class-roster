@@ -11,22 +11,19 @@
 
 using namespace std;
 
-// Define the Student class
 class Student {
 
-// Declare private member variables (attributes)
 private:
     string studentID;
     string firstName;
     string lastName;
     string emailAddress;
     int age;
-    int daysToComplete[3];  // Array to store days to complete each course
+    int daysToComplete[3];
     DegreeProgram degreeProgram;
     
 public:
-    // Student(); <- Parameterless Constructor. Sets default values. (may not be needed)
-    // Constructor to initialize a Student object with all attributes
+    // Constructor to initialize a Student object with attributes
     Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysToComplete[], DegreeProgram degreeProgram);
     // ~Student(); <- Destructor (may not be needed)
     
