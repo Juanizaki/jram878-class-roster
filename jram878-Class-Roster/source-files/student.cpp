@@ -24,7 +24,7 @@ Student::Student(string studentID, string firstName, string lastName, string ema
     this->degreeProgram = degreeProgram;
 }
 
-// Getter implementations
+// Getter implementation
 string Student::getStudentID() { return studentID; }
 string Student::getFirstName() { return firstName; }
 string Student::getLastName() { return lastName; }
@@ -34,7 +34,7 @@ int* Student::getDaysToComplete() { return daysToComplete; }
 DegreeProgram Student::getDegreeProgram() { return degreeProgram; }
 
 
-// Setter implementations
+// Setter implementation
 void Student::setStudentID(string studentID) { this->studentID = studentID; }
 void Student::setFirstName(string firstName) { this->firstName = firstName; }
 void Student::setLastName(string lastName) { this->lastName = lastName; }
@@ -49,13 +49,12 @@ void Student::setDegreeProgram(DegreeProgram degreeProgram) { this->degreeProgra
 
 // Print implementation
 void Student::print() {
-    cout << "ID: " << studentID << '\t'
-         << "First Name: " << firstName << '\t'
-         << "Last Name: " << lastName << '\t'
-         << "Email: " << emailAddress << '\t'
-         << "Age: " << age << '\t'
-         << "Days in Course: {" << daysToComplete[0] << ", " << daysToComplete[1] << ", " << daysToComplete[2] << "} \t"
-         << "Degree Program: ";
+    cout << studentID << string(2, '\t')
+         << firstName << string(2, '\t')
+         << lastName << string(2, '\t')
+         << emailAddress << string(2, '\t')
+         << age << string(2, '\t')
+         << "{" << daysToComplete[0] << ", " << daysToComplete[1] << ", " << daysToComplete[2] << "}" << string(2, '\t');
          if (degreeProgram == SECURITY) {
              cout << "Security \n";
          } else if (degreeProgram == NETWORK) {

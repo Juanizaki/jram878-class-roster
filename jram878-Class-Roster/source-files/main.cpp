@@ -47,11 +47,11 @@ int main() {
     cout << "Days in Course: {" << student1.getDaysToComplete()[0] << ", " << student1.getDaysToComplete()[1] << ", " << student1.getDaysToComplete()[2] << "} \n";
     cout << "Degree Program: ";
     if (student1.getDegreeProgram() == SECURITY) {
-        cout << "Security" << string( 2, '\n' );
+        cout << "Security" << string(2, '\n');
     } else if (student1.getDegreeProgram() == NETWORK) {
-        cout << "Network" << string( 2, '\n' );
+        cout << "Network" << string(2, '\n');
     } else {
-        cout << "Software" << string( 2, '\n' );
+        cout << "Software" << string(2, '\n');
     }
     
     // New array for days to complete courses
@@ -74,11 +74,11 @@ int main() {
     cout << "Days in Course: {" << student1.getDaysToComplete()[0] << ", " << student1.getDaysToComplete()[1] << ", " << student1.getDaysToComplete()[2] << "} \n";
     cout << "Degree Program: ";
     if (student1.getDegreeProgram() == SECURITY) {
-        cout << "Security" << string( 2, '\n' );
+        cout << "Security" << string(2, '\n');
     } else if (student1.getDegreeProgram() == NETWORK) {
-        cout << "Network" << string( 2, '\n' );
+        cout << "Network" << string(2, '\n');
     } else {
-        cout << "Software" << string( 2, '\n' );
+        cout << "Software" << string(2, '\n');
     }
     
     // Testing print function
