@@ -24,7 +24,7 @@ Student::Student(string studentID, string firstName, string lastName, string ema
     this->degreeProgram = degreeProgram;
 }
 
-// Getter method implementations
+// Getter implementations
 string Student::getStudentID() { return studentID; }
 string Student::getFirstName() { return firstName; }
 string Student::getLastName() { return lastName; }
@@ -34,7 +34,7 @@ int* Student::getDaysToComplete() { return daysToComplete; }
 DegreeProgram Student::getDegreeProgram() { return degreeProgram; }
 
 
-// Setter method implementations
+// Setter implementations
 void Student::setStudentID(string studentID) { this->studentID = studentID; }
 void Student::setFirstName(string firstName) { this->firstName = firstName; }
 void Student::setLastName(string lastName) { this->lastName = lastName; }
@@ -47,20 +47,20 @@ void Student::setDaysToComplete(int daysToComplete[]) {
 }
 void Student::setDegreeProgram(DegreeProgram degreeProgram) { this->degreeProgram = degreeProgram; }
 
-// Print method implementation
+// Print implementation
 void Student::print() {
-    cout << "ID: " << studentID << "\t"
-         << "First Name: " << firstName << "\t"
-         << "Last Name: " << lastName << "\t"
-         << "Email: " << emailAddress << "\t"
-         << "Age: " << age << "\t"
-         << "Days in Course: {" << daysToComplete[0] << ", " << daysToComplete[1] << ", " << daysToComplete[2] << "}\t"
+    cout << "ID: " << studentID << '\t'
+         << "First Name: " << firstName << '\t'
+         << "Last Name: " << lastName << '\t'
+         << "Email: " << emailAddress << '\t'
+         << "Age: " << age << '\t'
+         << "Days in Course: {" << daysToComplete[0] << ", " << daysToComplete[1] << ", " << daysToComplete[2] << "} \t"
          << "Degree Program: ";
          if (degreeProgram == SECURITY) {
-             cout << "Security" << endl;
+             cout << "Security \n";
          } else if (degreeProgram == NETWORK) {
-             cout << "Network" << endl;
+             cout << "Network \n";
          } else {
-             cout << "Software" << endl;
+             cout << "Software \n";
          }
 }
