@@ -8,6 +8,18 @@
 #include "roster.hpp"
 #include <iostream>
 #include <string>
+#include <sstream>
 
 using namespace std;
+
+Roster::Roster() {
+    lastIndex = -1;
+    capacity = 5;
+    classRosterArray = new Student*[capacity];
+}
+
+void Roster::parse(string row) {
+    stringstream ss(row);
+    string token;
+}
 

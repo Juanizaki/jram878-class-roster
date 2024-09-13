@@ -29,7 +29,7 @@ int main() {
     
     
     
-    /* *** TESTING *** */
+    // *** TESTING ***
     
     // Array for days to complete courses
     int daysArray[3] = {30, 40, 50};
@@ -39,12 +39,12 @@ int main() {
     
     // Testing getter functions
     cout << "*** Testing Getter Functions *** \n";
-    cout << "StudentID: " << student1.getStudentID() << '\n';
+    cout << "ID: " << student1.getStudentID() << '\n';
     cout << "First Name: " << student1.getFirstName() << '\n';
     cout << "Last Name: " << student1.getLastName() << '\n';
     cout << "Email: " << student1.getEmailAddress() << '\n';
     cout << "Age: " << student1.getAge() << '\n';
-    cout << "Days in Course: {" << student1.getDaysToComplete()[0] << ", " << student1.getDaysToComplete()[1] << ", " << student1.getDaysToComplete()[2] << "} \n";
+    cout << "Days In Course: {" << student1.getDaysInCourse()[0] << ", " << student1.getDaysInCourse()[1] << ", " << student1.getDaysInCourse()[2] << "} \n";
     cout << "Degree Program: ";
     if (student1.getDegreeProgram() == SECURITY) {
         cout << "Security" << string(2, '\n');
@@ -63,26 +63,12 @@ int main() {
     student1.setLastName("Shmeff");
     student1.setEmailAddress("jeff.shmeff@test.com");
     student1.setAge(25);
-    student1.setDaysToComplete(newDaysArray);
-    student1.setDegreeProgram(SECURITY);
-    cout << "*** Testing Setter Functions *** \n";
-    cout << "StudentID: " << student1.getStudentID() << '\n';
-    cout << "First Name: " << student1.getFirstName() << '\n';
-    cout << "Last Name: " << student1.getLastName() << '\n';
-    cout << "Email: " << student1.getEmailAddress() << '\n';
-    cout << "Age: " << student1.getAge() << '\n';
-    cout << "Days in Course: {" << student1.getDaysToComplete()[0] << ", " << student1.getDaysToComplete()[1] << ", " << student1.getDaysToComplete()[2] << "} \n";
-    cout << "Degree Program: ";
-    if (student1.getDegreeProgram() == SECURITY) {
-        cout << "Security" << string(2, '\n');
-    } else if (student1.getDegreeProgram() == NETWORK) {
-        cout << "Network" << string(2, '\n');
-    } else {
-        cout << "Software" << string(2, '\n');
-    }
+    student1.setDaysInCourse(newDaysArray);
+    student1.setDegreeProgram(NETWORK);
     
     // Testing print function
-    cout << "*** Testing Print Functions *** \n";
+    cout << "*** Testing Setter and Print Functions *** \n";
     student1.print();
     cout << endl;
+   
 }

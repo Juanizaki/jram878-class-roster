@@ -19,32 +19,27 @@ private:
     string lastName;
     string emailAddress;
     int age;
-    int daysToComplete[3];
+    int daysInCourse[3];
     DegreeProgram degreeProgram;
     
 public:
-    // Constructor to initialize a Student object with attributes
-    Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysToComplete[], DegreeProgram degreeProgram);
-    // ~Student(); <- Destructor (may not be needed)
+    Student(string id, string fname, string lname, string email, int a, int days[], DegreeProgram dp);
     
-    // Getters (accessor methods) to retrieve the values of private attributes
     string getStudentID();
     string getFirstName();
     string getLastName();
     string getEmailAddress();
     int getAge();
-    int* getDaysToComplete();
+    int* getDaysInCourse();
     DegreeProgram getDegreeProgram();
     
-    // Setters (mutator methods) to modify the values of private attributes
-    void setStudentID(string studentID);
-    void setFirstName(string firstName);
-    void setLastName(string lastName);
-    void setEmailAddress(string emailAddress);
-    void setAge(int age);
-    void setDaysToComplete(int daysToComplete[]);
-    void setDegreeProgram(DegreeProgram degreeProgram);
+    void setStudentID(string id);
+    void setFirstName(string fname);
+    void setLastName(string lname);
+    void setEmailAddress(string email);
+    void setAge(int a);
+    void setDaysInCourse(int days[]);
+    void setDegreeProgram(DegreeProgram dp);
     
-    // Method to print the student's details
     void print();
 };
