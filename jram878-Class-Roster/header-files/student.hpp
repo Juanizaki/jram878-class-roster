@@ -24,7 +24,6 @@ class Student {
         
     public:
         Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse[], DegreeProgram degreeProgram);
-        ~Student();
         
         string getStudentID();
         string getFirstName();

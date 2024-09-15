@@ -11,6 +11,7 @@
 
 using namespace std;
 
+// Constructor implementation
 Student::Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse[], DegreeProgram degreeProgram) {
     this->studentID = studentID;
     this->firstName = firstName;
@@ -23,6 +24,7 @@ Student::Student(string studentID, string firstName, string lastName, string ema
     this->degreeProgram = degreeProgram;
 }
 
+// Getter implementation
 string Student::getStudentID() { return this->studentID; }
 string Student::getFirstName() { return this->firstName; }
 string Student::getLastName() { return this->lastName; }
@@ -31,6 +33,7 @@ int Student::getAge() { return this->age; }
 int* Student::getDaysInCourse() { return this->daysInCourse; }
 DegreeProgram Student::getDegreeProgram() { return this->degreeProgram; }
 
+// Setter implementation
 void Student::setStudentID(string studentID) { this->studentID = studentID; }
 void Student::setFirstName(string firstName) { this->firstName = firstName; }
 void Student::setLastName(string lastName) { this->lastName = lastName; }
@@ -43,6 +46,7 @@ void Student::setDaysInCourse(int daysInCourse[]) {
 }
 void Student::setDegreeProgram(DegreeProgram degreeProgram) { this->degreeProgram = degreeProgram; }
 
+// Print implementation
 void Student::print() {
     cout << "ID: " << studentID << string(2, '\t');
     cout << "First Name: " << firstName << string(2, '\t');
@@ -63,8 +67,4 @@ void Student::print() {
             break;
     }
     cout << endl;
-}
-
-Student::~Student() {
-    // Not currently needed
 }

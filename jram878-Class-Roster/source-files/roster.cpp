@@ -15,17 +15,17 @@ Roster::Roster() {
     lastIndex = -1;
 }
 
-// Parse a row of student data and add it to the roster
+// Parses a row of student data and adds it to the roster
 void Roster::parse(string row) {
     stringstream studentStream(row);
     string data[9]; // Array to hold parsed data
     
-    // Extract each component of the row and store in the data array
+    // Extracts each component of the row and stores in the data array
     for (int i = 0; i < 9; i++) {
         getline(studentStream, data[i], ',');
     }
     
-    // Assigning variables from the parsed data
+    // Assigns variables from the parsed data
     string studentID = data[0];
     string firstName = data[1];
     string lastName = data[2];
@@ -39,18 +39,17 @@ void Roster::parse(string row) {
     else if (data[8] == "NETWORK") degreeProgram = NETWORK;
     else degreeProgram = SOFTWARE;
     
-    // Add student to the roster
     add(studentID, firstName, lastName, emailAddress, age, daysInCourse1, daysInCourse2, daysInCourse3, degreeProgram);
 }
 
-// Add a student to the roster
+// Adds a student to the roster
 void Roster::add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram) {
     lastIndex++;
     int daysInCourse[] = {daysInCourse1, daysInCourse2, daysInCourse3};
     classRosterArray[lastIndex] = new Student(studentID, firstName, lastName, emailAddress, age, daysInCourse, degreeProgram);
 }
 
-// Remove a student from the roster by studentID
+// Removes a student from the roster
 void Roster::remove(string studentID) {
     bool found = false;
     
@@ -72,14 +71,12 @@ void Roster::remove(string studentID) {
     }
 }
 
-// Prints all students in the roster
 void Roster::printAll() {
     for (int i = 0; i <= lastIndex; i++) {
         classRosterArray[i]->print();
     }
 }
 
-// Prints average days in course by studentID
 void Roster::printAverageDaysInCourse(string studentID) {
     for (int i = 0; i <= lastIndex; i++) {
         if (classRosterArray[i]->getStudentID() == studentID) {
@@ -89,7 +86,6 @@ void Roster::printAverageDaysInCourse(string studentID) {
     }
 }
 
-// Prints invalid emails
 void Roster::printInvalidEmails() {
     for (int i = 0; i <= lastIndex; i++) {
         string email = classRosterArray[i]->getEmailAddress();
@@ -99,7 +95,6 @@ void Roster::printInvalidEmails() {
     }
 }
 
-// Prints students by degreeProgram
 void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
     for (int i = 0; i <= lastIndex; i++) {
         if (classRosterArray[i]->getDegreeProgram() == degreeProgram) {
@@ -108,6 +103,7 @@ void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
     }
 }
 
+// Destructor to release memory
 Roster::~Roster() {
     for (int i = 0; i <= lastIndex; i++) {
         delete classRosterArray[i];
