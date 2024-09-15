@@ -84,7 +84,7 @@ void Roster::printAverageDaysInCourse(string studentID) {
     for (int i = 0; i <= lastIndex; i++) {
         if (classRosterArray[i]->getStudentID() == studentID) {
             int* days = classRosterArray[i]->getDaysInCourse();
-            cout << "Student ID: " << studentID << ", average days in course: " << (days[0] + days[1] + days[2])/ 3 << endl;
+            cout << "Student: " << studentID << string(2, '\t') << "Average: " << (days[0] + days[1] + days[2])/ 3 << " days" << endl;
         }
     }
 }
