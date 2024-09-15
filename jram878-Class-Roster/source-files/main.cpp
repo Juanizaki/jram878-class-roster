@@ -13,10 +13,12 @@ using namespace std;
 
 int main() {
     
-    cout << "C867-Scripting & Programming: Applications \n";
-    cout << "Language: C++ \n";
-    cout << "StudentID: 011028882 \n";
-    cout << "Name: Juan Ramos \n\n";
+    cout << "C867-Scripting & Programming: Applications\n";
+    cout << "Language: C++\n";
+    cout << "StudentID: 011028882\n";
+    cout << "Name: Juan Ramos\n\n";
+    
+    Roster classRoster;
     
     const string studentData[] = {
         "A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY",
@@ -26,49 +28,49 @@ int main() {
         "A5,Juan,Ramos,jram878@wgu.edu,29,51,22,55,SOFTWARE"
     };
     
-    
-    
-    
-    // *** TESTING ***
-    
-    // Array for days to complete courses
-    int daysArray[3] = {30, 40, 50};
-    
-    // Student object using constructor
-    Student student1("A1", "Joe", "Shmoe", "joe.shmoe@test.com", 20, daysArray, SOFTWARE);
-    
-    // Testing getter functions
-    cout << "*** Testing Getter Functions *** \n";
-    cout << "ID: " << student1.getStudentID() << '\n';
-    cout << "First Name: " << student1.getFirstName() << '\n';
-    cout << "Last Name: " << student1.getLastName() << '\n';
-    cout << "Email: " << student1.getEmailAddress() << '\n';
-    cout << "Age: " << student1.getAge() << '\n';
-    cout << "Days In Course: {" << student1.getDaysInCourse()[0] << ", " << student1.getDaysInCourse()[1] << ", " << student1.getDaysInCourse()[2] << "} \n";
-    cout << "Degree Program: ";
-    if (student1.getDegreeProgram() == SECURITY) {
-        cout << "Security" << string(2, '\n');
-    } else if (student1.getDegreeProgram() == NETWORK) {
-        cout << "Network" << string(2, '\n');
-    } else {
-        cout << "Software" << string(2, '\n');
+    // Adds each student to the roster
+    for (int i = 0; i < 5; i++) {
+        classRoster.parse(studentData[i]);
     }
     
-    // New array for days to complete courses
-    int newDaysArray[3] = {44, 33, 55};
-    
-    // Testing setter functions
-    student1.setStudentID("A2");
-    student1.setFirstName("Jeff");
-    student1.setLastName("Shmeff");
-    student1.setEmailAddress("jeff.shmeff@test.com");
-    student1.setAge(25);
-    student1.setDaysInCourse(newDaysArray);
-    student1.setDegreeProgram(NETWORK);
-    
-    // Testing print function
-    cout << "*** Testing Setter and Print Functions *** \n";
-    student1.print();
+    // Prints all students
+    cout << "Displaying all students:\n";
+    classRoster.printAll();
     cout << endl;
-   
+    
+    // Prints invalid emails
+    cout << "Displaying invalid emails:\n";
+    classRoster.printInvalidEmails();
+    cout << endl;
+    
+    // Prints average days in course for each student
+    cout << "Displaying average days in course:\n";
+    for (int i = 0; i <= 4; i++) {
+        classRoster.printAverageDaysInCourse(classRoster.getClassRosterArray()[i]->getStudentID());
+    }
+    cout << endl;
+    
+    // Prints by software degree program
+    cout << "Displaying students in degree program: SOFTWARE\n";
+    classRoster.printByDegreeProgram(SOFTWARE);
+    cout << endl;
+    
+    // Removing A3
+    cout << "Removing student: A3\n";
+    classRoster.remove("A3");
+    cout << endl;
+    
+    // Prints all students again
+    cout << "Displaying all students: UPDATED\n";
+    classRoster.printAll();
+    cout << endl;
+    
+    // Attempting to remove A3 again
+    cout << "Removing student: A3\n";
+    classRoster.remove("A3");
+    cout << endl;
+    
+    cout << "Program Complete\n\n";
+    
+    return 0;
 }
